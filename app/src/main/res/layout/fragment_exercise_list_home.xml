@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exercise.ExerciseListHomeFragment">
+
+    //메인 스크롤 뷰
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/home_exercise_list_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/exercise_card_tab_layout_bg"
+            app:tabIndicator="@drawable/exercise_card_tab_indicator"
+            app:tabIndicatorFullWidth="false"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/exercise_card_tab_selected_primary"
+            app:tabTextAppearance="@style/AppTheme.Tabs.TextAppearance"
+            app:tabTextColor="#476282">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/home_exercise_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="운동 목록"></com.google.android.material.tabs.TabItem>
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/home_routine_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="루틴 목록"></com.google.android.material.tabs.TabItem>
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <FrameLayout
+            android:id="@+id/home_exercise_list_tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            <fragment-->
+            <!--                android:id="@+id/exercise_list_fragment"-->
+            <!--                android:name="org.techtown.MyExerciseApp.Exercise.ExerciseListFragment"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent" />-->
+
+            <!--            <fragment-->
+            <!--                android:id="@+id/routine_list_fragment"-->
+            <!--                android:name="org.techtown.MyExerciseApp.Exercise.RoutineListFragment"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent" />-->
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+</FrameLayout>
+
+    <!--
+       <com.applandeo.materialcalendarview.CalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:headerColor="@color/primary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/toolbar"
+                            app:todayLabelColor="@color/secondary" />
+    -->

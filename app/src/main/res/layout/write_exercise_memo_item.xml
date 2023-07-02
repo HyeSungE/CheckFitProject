@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/write_exercise_rmemo_rel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="310dp"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:id="@+id/exercise_memo_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="- 운동 날짜 -"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/write_exercise_memo_body"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@id/exercise_memo_today"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/exercise_memo_title"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/write_exercise_memo_borderline_top"
+            android:hint="메모 제목을 입력 해주세요"
+
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/exercise_memo_content"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/write_exercise_memo_borderline_bottom"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="메모 내용을 기록 해주세요"
+
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/write_exercise_memo_body"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/write_exercise_memo_delete_bt"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="지우기"
+            android:textSize="16sp"
+            app:iconPadding="8dp" />
+
+        <Button
+            android:id="@+id/write_exercise_memo_complete_bt"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0970e5"
+            android:text="작성하기"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!--    <Button-->
+    <!--        android:id="@+id/write_exercise_memo_complete_bt"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentEnd="false"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginTop="190dp"-->
+    <!--        android:layout_marginEnd="162dp"-->
+    <!--        android:layout_marginBottom="20dp"-->
+    <!--        android:text="작성하기" />-->
+
+</RelativeLayout>

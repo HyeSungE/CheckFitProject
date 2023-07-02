@@ -1,0 +1,62 @@
+
+e	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÂÙ 
+f	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¢ôà
+C
+java:S16042"(Make this anonymous inner class a lambda(¿é¬Ùùÿÿÿÿ
+>
+java:S1604:"(Make this anonymous inner class a lambda(Ï¢ú˜
+>
+java:S1604B"(Make this anonymous inner class a lambda(Î‘ö
+C
+java:S1604J"(Make this anonymous inner class a lambda(¿¥üœşÿÿÿÿ
+>
+java:S1604["(Make this anonymous inner class a lambda(¬¸í÷
+C
+java:S1604X"(Make this anonymous inner class a lambda(°¢Ùäûÿÿÿÿ
+>
+java:S1604c"(Make this anonymous inner class a lambda(…ÇÇ¬
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(äÓº•ûÿÿÿÿ
+e
+java:S1226&"OIntroduce a new variable instead of reusing the parameter "savedInstanceState".(Ÿä‹ü
+x	java:S116"cRename this field "show_today_group_routine" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôõëØ
+o	java:S116"ZRename this field "delete_group_bt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôõëØ
+p	java:S116"[Rename this field "delete_member_bt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôõëØ
+p	java:S116"[Rename this field "shart_routine_bt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôõëØ
+}	java:S116"cRename this field "show_group_member_attend" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó³ıªşÿÿÿÿ
+	java:S116"eRename this field "show_group_routine_history" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ÑòØıÿÿÿÿ
+–
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(’À½l
+b
+java:S1659"LDeclare "delete_group_bt" and all following declarations on a separate line.(ôõëØ
+t
+java:S1450"^Remove the "delete_group_bt" field and declare it as a local variable in the relevant methods.(ôõëØ
+u
+java:S1450"_Remove the "delete_member_bt" field and declare it as a local variable in the relevant methods.(ôõëØ
+u
+java:S1450"_Remove the "shart_routine_bt" field and declare it as a local variable in the relevant methods.(ôõëØ
+‚
+java:S1450"gRemove the "show_group_member_attend" field and declare it as a local variable in the relevant methods.(Ó³ıªşÿÿÿÿ
+„
+java:S1450"iRemove the "show_group_routine_history" field and declare it as a local variable in the relevant methods.(×ÑòØıÿÿÿÿ
+}
+java:S1450"gRemove the "show_today_group_routine" field and declare it as a local variable in the relevant methods.(ôõëØ
+œ
+java:S11864"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ¸™áúÿÿÿÿ
+œ
+java:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ¸™áúÿÿÿÿ
+œ
+java:S1186D"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ¸™áúÿÿÿÿ
+œ
+java:S1186L"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ¸™áúÿÿÿÿ
+œ
+java:S1186e"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(»ŠÇ¾ıÿÿÿÿ
+j
+java:S3252o"OUse static access with "android.content.DialogInterface" for "BUTTON_POSITIVE".(¸Õà¤ÿÿÿÿÿ
+K
+java:S1874o"0Remove this use of "getColor"; it is deprecated.(¸Õà¤ÿÿÿÿÿ
+j
+java:S3252p"OUse static access with "android.content.DialogInterface" for "BUTTON_NEGATIVE".(Ô²öĞıÿÿÿÿ
+K
+java:S1874p"0Remove this use of "getColor"; it is deprecated.(Ô²öĞıÿÿÿÿ
+O
+java:S1144U"9Remove this unused private "showAlertDeleteGroup" method.(úñ–

@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_exercise_rel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:background="@drawable/edit_rest_timer_border"
+    android:padding="5dp">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/custom_exercise_drag_handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:id="@+id/custom_exercise_grapple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/ic_bottom_sheet_grapple" />
+
+    <RelativeLayout
+        android:id="@+id/custom_exercise_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/custom_exercise_dig_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="운동 만들기"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/custom_exercise_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/custom_exercise_dig_title"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:hint="운동 이름을 입력해주세요."
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custom_exercise_name_et"
+            android:layout_marginTop="10dp"
+            android:text="운동 부위"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/textView2"
+            android:layout_alignRight="@id/textView2"
+            android:layout_alignParentEnd="false"
+            android:layout_marginTop="2dp"
+            android:background="@color/black" />
+
+        <HorizontalScrollView
+
+            android:id="@+id/custom_exercise_bodypart_group_hlr"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/divider1"
+            android:layout_marginTop="4dp"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+
+                android:id="@+id/custom_exercise_bodypart_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/divider1"
+                android:layout_marginTop="4dp"
+                app:checkedChip="@id/chest_chip"
+                app:chipSpacingHorizontal="10dp"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chest_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="가슴"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:textEndPadding="0dp"
+                    app:textStartPadding="0dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/shoulder_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="어깨"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:textEndPadding="0dp"
+                    app:textStartPadding="0dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/back_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="등"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:textEndPadding="0dp"
+                    app:textStartPadding="0dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/legs_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="하체"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:textEndPadding="0dp"
+                    app:textStartPadding="0dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/arms_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="팔"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:textEndPadding="0dp"
+                    app:textStartPadding="0dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/cardio_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="유산소"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:textEndPadding="0dp"
+                    app:textStartPadding="0dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/abs_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:text="복근"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:textEndPadding="0dp"
+                    app:textStartPadding="0dp" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/custom_exercise_bodypart_group_hlr"
+            android:layout_alignRight="@id/custom_exercise_bodypart_group_hlr"
+            android:layout_alignParentEnd="false"
+            android:layout_marginTop="3dp"
+            android:background="#CACACA" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider2"
+            android:layout_marginTop="10dp"
+            android:text="운동 도구"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/textView3"
+            android:layout_alignRight="@id/textView3"
+            android:layout_alignParentEnd="false"
+            android:layout_marginTop="2dp"
+            android:background="@color/black" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/custom_exercise_equipment_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider3"
+            android:layout_marginTop="4dp"
+            app:checkedChip="@id/barbell_chip"
+            app:chipSpacingHorizontal="10dp"
+            app:chipSpacingVertical="5dp"
+            app:singleLine="false"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/barbell_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="바벨"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/dumbbell_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="덤벨"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/machine_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="머신"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/smithMachine_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="스미스머신"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cable_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="케이블"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/assist_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="어시스트"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ezbar_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="이지바"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/kettlebell_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="케틀벨"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/bodyweight_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="맨몸"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/weighted_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="중량"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/etc_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="기타"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/custom_exercise_equipment_group"
+            android:layout_alignRight="@id/custom_exercise_equipment_group"
+            android:layout_alignParentEnd="false"
+            android:layout_marginTop="3dp"
+            android:background="#CACACA" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider4"
+            android:layout_marginTop="13dp"
+            android:text="운동 방식"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/textView4"
+            android:text="( 최대 2개 선택 가능 )"
+            android:textColor="#EBFF0000"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/divider31"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/textView4"
+            android:layout_alignRight="@id/textView4"
+            android:layout_alignParentEnd="false"
+            android:layout_marginTop="2dp"
+            android:background="@color/black" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/custom_exercise_type_group"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/divider31"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="4dp"
+            app:chipSpacingHorizontal="13dp"
+            app:singleLine="true"
+            app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/weight_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="무게"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/reps_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="횟수"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/time_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="시간"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/distance_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="거리"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <View
+            android:id="@+id/divider13"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/custom_exercise_type_group"
+            android:layout_alignRight="@id/custom_exercise_type_group"
+            android:layout_alignParentEnd="false"
+            android:layout_marginTop="3dp"
+            android:background="#CACACA" />
+
+        <TextView
+            android:id="@+id/custom_exercise_dialog_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider13"
+            android:layout_marginTop="13dp"
+            android:text="무게 단위"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/custom_exercise_dialog_tv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/custom_exercise_dialog_tv"
+            android:layout_alignRight="@id/custom_exercise_dialog_tv"
+            android:layout_alignParentEnd="false"
+            android:layout_marginTop="2dp"
+            android:background="@color/black" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/custom_exercise_weight_unit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/custom_exercise_dialog_tv"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="4dp"
+            app:chipSpacingHorizontal="13dp"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/kg_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="kg"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/lbschip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="lbs"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:textEndPadding="0dp"
+                app:textStartPadding="0dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/custom_exercise_ok_bt"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="운동 만들기"
+        android:visibility="visible" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

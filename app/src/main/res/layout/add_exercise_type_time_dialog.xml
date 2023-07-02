@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_rest_timer_rel_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:background="@drawable/edit_rest_timer_border"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:id="@+id/add_row_time_title"
+        android:layout_width="180dp"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:text="운동 시간"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/add_row_time_linear_layout"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="90dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/add_row_time_minute"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="viewEnd" />
+
+        <TextView
+            android:id="@+id/textView73"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="분"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/add_row_time_second"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="viewEnd" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="초"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_add_row_time_minute_et"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_row_time_linear_layout"
+        android:layout_alignLeft="@id/add_row_time_linear_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="viewEnd" />
+
+    <TextView
+        android:id="@+id/edit_add_row_time_minute_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_row_time_linear_layout"
+        android:layout_alignBottom="@id/edit_add_row_time_minute_et"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/edit_add_row_time_minute_et"
+        android:gravity="left|center_vertical"
+        android:text="분"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/edit_add_row_time_minute_up_bt"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/add_row_time_linear_layout"
+        android:layout_alignBottom="@id/edit_add_row_time_minute_et"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/edit_add_row_time_minute_tv"
+        android:background="#0970e5"
+        android:text="▲"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/edit_add_row_time_minute_down_bt"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/add_row_time_linear_layout"
+        android:layout_alignBottom="@id/edit_add_row_time_minute_up_bt"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/edit_add_row_time_minute_up_bt"
+        android:background="#0970e5"
+        android:text="▼"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/edit_add_row_time_second_et"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_row_time_linear_layout"
+        android:layout_alignLeft="@id/edit_add_row_time_minute_et"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="viewEnd" />
+
+    <TextView
+        android:id="@+id/edit_add_row_time_second_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_row_time_linear_layout"
+        android:layout_alignBottom="@id/edit_add_row_time_second_et"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/edit_add_row_time_second_et"
+        android:gravity="left|center_vertical"
+        android:text="초"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/edit_add_row_time_second_up_bt"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/add_row_time_linear_layout"
+        android:layout_alignBottom="@id/edit_add_row_time_second_et"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/edit_add_row_time_second_tv"
+        android:background="#0970e5"
+        android:text="▲"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/edit_add_row_time_second_down_bt"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/add_row_time_linear_layout"
+        android:layout_alignBottom="@id/edit_add_row_time_second_up_bt"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@id/edit_add_row_time_second_up_bt"
+        android:background="#0970e5"
+        android:text="▼"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+
+    <Button
+        android:id="@+id/ok_add_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="255dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="10dp"
+        android:background="#0970e5"
+        android:text="확인" />
+
+</RelativeLayout>

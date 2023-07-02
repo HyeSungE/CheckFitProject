@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_exercise_list_frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:textAlignment="center"
+    tools:context=".Home.HomeFragment">
+    //메인 스크롤 뷰
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/main_exercise_list_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/exercise_card_tab_layout_bg"
+            android:visibility="visible"
+            app:tabIndicator="@drawable/exercise_card_tab_indicator"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="scrollable"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/exercise_card_tab_selected_primary"
+            app:tabTextAppearance="@style/AppTheme.Tabs.TextAppearance"
+            app:tabTextColor="#476282">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/exercise_list_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="즐겨찾기" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/exercise_list_chest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가슴" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/exercise_list_shoulder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어깨" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/exercise_list_latest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="등" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/exercise_list_legs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="하체" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/exercise_list_arms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="팔" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/exercise_list_cardio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="유산소" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/exercise_list_waist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="복근" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/exercise_search_view"
+                android:layout_width="310dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:closeIcon="@drawable/ic_baseline_clear_24"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@drawable/searchview_background"
+                app:queryHint="운동을 검색해보세요 !"
+                app:searchIcon="@drawable/ic_baseline_search_24" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <FrameLayout
+            android:id="@+id/main_exercise_list_tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/exercise_list_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarFadeDuration="0">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/no_item_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="운동을 추가 해주세요 !"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:visibility="invisible" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/exercise_list_fragment_bottom_lr"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <Button
+                android:id="@+id/custom_exercise_bt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="#0970e5"
+                android:text="운동 만들기" />
+
+            <Button
+                android:id="@+id/exerciseList_addBt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.6"
+                android:background="#0970e5"
+                android:scrollHorizontally="true"
+                android:text="운동 추가하기" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
+
+    <!--
+       <com.applandeo.materialcalendarview.CalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:headerColor="@color/primary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/toolbar"
+                            app:todayLabelColor="@color/secondary" />
+    -->

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_rest_timer_border"
+    android:padding="18dp">
+
+    <TextView
+        android:id="@+id/exercise_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="false"
+        android:layout_toLeftOf="@id/exercise_view_edit"
+        android:background="@drawable/edit_total_exercise_timer_under_line"
+        android:gravity="center"
+        android:text="운동이름" />
+
+    <EditText
+        android:id="@+id/exercise_view_name_et"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="false"
+        android:layout_toLeftOf="@id/exercise_view_edit"
+        android:background="@drawable/edit_total_exercise_timer_under_line"
+        android:gravity="center"
+        android:text="운동이름"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/exercise_view_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="편집" />
+
+    <TableLayout
+        android:id="@+id/exercise_view_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exercise_view_name">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/exercise_view_bodypart_title"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/start_right_side_line"
+                android:gravity="center"
+                android:text="운동부위" />
+
+            <TextView
+                android:id="@+id/exercise_view_bodypart_content_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/start_left_side_line"
+                android:gravity="center"
+                android:text="TextView"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/exercise_view_bodypart_content_et"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="가슴"
+                android:visibility="gone" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/exercise_view_equipment_title"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/start_right_side_line"
+                android:gravity="center"
+                android:text="운동도구" />
+
+            <TextView
+                android:id="@+id/exercise_view_equipment_content_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/start_left_side_line"
+                android:gravity="center"
+                android:text="TextView"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/exercise_view_equipment_content_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="덤벨"
+                android:visibility="gone" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/exercise_view_weightUnit_title"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/start_right_side_line"
+                android:gravity="center"
+                android:text="무게단위" />
+
+            <TextView
+                android:id="@+id/exercise_view_weightUnit_content_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/start_left_side_line"
+                android:gravity="center"
+                android:text="TextView"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/exercise_view_weightUnit_content_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="KG"
+                android:visibility="gone" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/exercise_view_exType_title"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/start_right_side_line"
+                android:gravity="center"
+                android:text="운동타입" />
+
+            <TextView
+                android:id="@+id/exercise_view_exType_content_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/start_left_side_line"
+                android:gravity="center"
+                android:text="TextView"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/exercise_view_exType_content_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="무게/횟수"
+                android:visibility="gone" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_total_exercise_timer_under_line"
+            android:gravity="center"
+            android:padding="20dp">
+
+
+            <ImageView
+                android:id="@+id/exercise_view_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+              />
+        </TableRow>
+
+
+    </TableLayout>
+</RelativeLayout>

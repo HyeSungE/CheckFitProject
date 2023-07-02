@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/routine_list_item_rel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/exercise_list_non_select_border"
+    android:clickable="false"
+    android:clipToPadding="false"
+    android:orientation="horizontal"
+    app:layout_marginBaseline="10dp"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/routine_image"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/do_exercises_icon" />
+
+    <LinearLayout
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/routine_image"
+        android:layout_alignBottom="@id/routine_image"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/list_routine_favorite_add_bt"
+        android:layout_toEndOf="@+id/routine_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/list_routine_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="2"
+            android:gravity="left|center_vertical"
+            android:maxLines="1"
+            android:text="루틴의 이름이 보여집니다."
+            app:autoSizeMaxTextSize="18sp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/list_routine_latest_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="9999 - 99 - 99"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/list_routine_favorite_add_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#00FFFFFF"
+        android:paddingStart="-3dp"
+        android:paddingEnd="-3dp"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/list_routine_frequency"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:layout_toLeftOf="@id/list_exercise_favorite_add_bt"-->
+    <!--        android:backgroundTint="#FFFFFF"-->
+    <!--        android:text="97" />-->
+
+</RelativeLayout>

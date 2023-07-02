@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.HomeTodayExerciseFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/exercise_total_day_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/today_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="X일 동안 Y번 운동했습니다." />
+
+        <ImageButton
+            android:id="@+id/exercise_start_bt"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/exercise_total_day_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_button_background"
+            android:scaleType="center"
+            android:src="@drawable/do_exercises_icon"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <TextView
+            android:id="@+id/exercise_start_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/exercise_start_bt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="오늘의 운동 하기" />
+
+        <TextView
+            android:id="@+id/exercise_edit_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="60dp"
+            android:text="오늘의 운동 편집"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/today_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="오늘 날짜가 보여집니다." />
+
+        <TextView
+            android:id="@+id/exercise_consecutive_day_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/exercise_start_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="연속 운동 횟수가 보여집니다 ( 불꽃 이모티콘)" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:padding="10dp"
+    tools:context=".Group.MyGroupFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/my_group_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@drawable/rounded_tab_shape"
+            app:tabGravity="fill"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@android:color/white">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/my_group_leader_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="리더" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/my_group_member_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="멤버" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <View
+            android:id="@+id/divider9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/my_group_tab_layout"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_group_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/divider9" />
+
+        <TextView
+            android:id="@+id/my_group_no_item_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/divider9"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</FrameLayout>

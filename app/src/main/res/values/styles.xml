@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+            <style name="Theme.Project3" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/exercise_card_tab_selected_primary</item>
+        <item name="colorPrimaryDark">@color/exercise_card_tab_selected_dark</item>
+        <item name="colorAccent">#0970E6</item>
+
+            </style>
+
+    <style name="AppTheme.Tabs.TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetDialogStyle</item>
+    </style>
+
+    <style name="BottomSheetDialogStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@drawable/edit_rest_timer_border</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+    </style>
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/spf_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/spf1_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/spf1_card_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">>
+
+            <TextView
+                android:id="@+id/save_photo_round"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/save_photo_title"
+                android:layout_alignBottom="@id/save_photo_title"
+                android:gravity="center|left"
+                android:text="1 Round" />
+
+            <TextView
+                android:id="@+id/save_photo_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="로고와 제목 자리" />
+
+            <TextView
+                android:id="@+id/save_photo_exercise_time"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/save_photo_round"
+                android:gravity="center"
+                android:text="00 : 00 : 00"
+                android:textSize="70sp" />
+
+            <LinearLayout
+                android:id="@+id/spf1_totalInfo_1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/save_photo_exercise_time"
+                android:layout_alignParentEnd="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/save_photo_set"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="99999999"
+                    android:textSize="20sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/save_photo_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minWidth="40dp"
+                    android:singleLine="false"
+                    android:text="999999999"
+                    android:textSize="20sp"
+                    app:autoSizeTextType="uniform" />
+
+                <ImageView
+                    android:id="@+id/save_photo_exercise_smile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:maxWidth="50dp"
+                    android:minWidth="50dp"
+                    android:src="@drawable/do_exercises_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/spf1_totalInfo_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spf1_totalInfo_1"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/save_photo_set_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="SET" />
+
+                <TextView
+                    android:id="@+id/save_photo_weight_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="운동량 (KG)" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/spf1_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spf1_totalInfo_2"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"></LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

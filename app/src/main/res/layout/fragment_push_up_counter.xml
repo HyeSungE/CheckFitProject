@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_rest_timer_border"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="자동 카운트 다운"
+        android:textSize="24sp" />
+
+    <ImageButton
+        android:id="@+id/help_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/textView16"
+        android:layout_alignEnd="@id/textView16"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="false"
+        android:background="@null"
+        app:srcCompat="@android:drawable/ic_menu_help" />
+
+    <TextView
+        android:id="@+id/countdown_textview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/textView16"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_button_background_disabled"
+        android:gravity="center"
+        android:text="99"
+        android:textColor="@color/LoginColorBlack"
+        android:textSize="96sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countdown_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/stop_button2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FF0000"
+            android:text="취소"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="포기하기"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

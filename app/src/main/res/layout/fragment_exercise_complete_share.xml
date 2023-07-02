@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/exerciseShareFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:padding="5dp"
+    tools:context=".Exercise.ExerciseCompleteShare">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/complete_exercise_round_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="2dp"
+            android:text="- 1 ROUND -"
+            android:textSize="28sp" />
+
+        <Spinner
+            android:id="@+id/complete_exercise_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/complete_exercise_round_tv"
+            android:layout_toRightOf="@id/complete_exercise_round_tv"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/complete_sava_routine_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/complete_exercise_round_tv"
+            android:layout_alignParentRight="true"
+            android:background="#0970e5"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="루틴 저장"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/complete_exercise_time_tv"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/complete_exercise_round_tv"
+            android:layout_alignParentStart="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="00 : 00 : 00"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/complete_exercise_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complete_exercise_time_tv"
+            android:layout_alignParentEnd="false"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="종목 수 kg/kg"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/kgtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complete_exercise_time_tv"
+            android:layout_alignBottom="@id/complete_exercise_count"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/complete_exercise_count"
+            android:text="kg"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/complete_exercise_rv"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_below="@id/complete_exercise_count"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:padding="30dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/complete_exercise_smile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/complete_exercise_rv"
+            android:layout_alignBottom="@id/complete_exercise_memo"
+            android:layout_alignParentBottom="false"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/smile1" />
+
+        <EditText
+            android:id="@+id/complete_exercise_memo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/complete_exercise_rv"
+            android:layout_alignParentBottom="false"
+            android:layout_toRightOf="@id/complete_exercise_smile"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="컨디션을 스마일로 표시하고 \n오늘 운동에 대해서 메모해 보세요 !"
+            android:inputType="textMultiLine|textPersonName"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbars="vertical"
+            android:verticalScrollbarPosition="right" />
+
+        <CheckBox
+            android:id="@+id/summary_exercise_set_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@id/complete_exercise_smile"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:text="세트요약" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complete_exercise_smile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/exercise_share_photo_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignBaseline="@id/ok_or_share_feed_bt"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="#0970e5"
+                android:text="수정하기" />
+
+            <Button
+                android:id="@+id/ok_or_share_feed_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:background="#0970e5"
+                android:text="확인" />
+
+            <Button
+                android:id="@+id/exercise_share_save_text_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignBaseline="@id/ok_or_share_feed_bt"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="#0970e5"
+                android:text="공유하기"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/complete_smile_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/complete_exercise_smile"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="false"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginBottom="-15dp"
+            android:layout_toRightOf="@id/complete_exercise_smile"
+            android:background="@drawable/smile_icon_select_window_chat_bubble"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView41"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/smile1" />
+
+                <ImageView
+                    android:id="@+id/imageView42"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/smile2" />
+
+                <ImageView
+                    android:id="@+id/imageView43"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/smile3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView44"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/smile4" />
+
+                <ImageView
+                    android:id="@+id/imageView45"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/smile5" />
+
+                <ImageView
+                    android:id="@+id/imageView46"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/smile6" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView47"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/smile7" />
+
+                <ImageView
+                    android:id="@+id/imageView48"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/smile8" />
+
+                <ImageView
+                    android:id="@+id/imageView49"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/smile9" />
+            </TableRow>
+
+        </TableLayout>
+
+    </RelativeLayout>
+</FrameLayout>

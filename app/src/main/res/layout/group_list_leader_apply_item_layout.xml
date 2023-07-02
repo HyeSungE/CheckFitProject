@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/edit_total_exercise_timer_under_line"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/apply_user_image"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+
+        android:layout_centerInParent="false" />
+
+    <TextView
+        android:id="@+id/apply_user_nickname"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/apply_user_image"
+        android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@id/apply_user_image"
+        android:background="@drawable/ic_baseline_chevron_right_24" />
+
+    <ImageView
+        android:id="@+id/apply_group_image"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/imageView4" />
+
+    <TextView
+        android:id="@+id/apply_group_name"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/apply_group_image"
+        android:layout_alignEnd="@id/apply_group_image"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/gli_ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@+id/apply_group_image"
+        android:layout_toRightOf="@id/apply_group_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/group_list_item_limit_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="모집인원"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/apply_group_current"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="/" />
+
+            <TextView
+                android:id="@+id/apply_group_limit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/apply_user_nickname"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/group_apply_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:background="#D50000"
+            android:text="가입 거절" />
+
+        <Button
+            android:id="@+id/group_apply_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#0970e5"
+            android:text="가입 수락" />
+    </LinearLayout>
+
+</RelativeLayout>
+

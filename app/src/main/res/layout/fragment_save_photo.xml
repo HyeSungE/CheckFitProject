@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="10dp"
+    tools:context=".Exercise.SavePhoto">
+
+    <ImageButton
+        android:id="@+id/save_photo_return_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/save_photo_frame_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_baseline_close_24" />
+
+    <ImageButton
+        android:id="@+id/save_photo_back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/save_photo_frame_name"
+        android:layout_alignBottom="@id/save_photo_frame_name"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/save_photo_return_arrow"
+
+        android:src="@drawable/ic_baseline_chevron_left_24" />
+
+    <TextView
+        android:id="@+id/save_photo_frame_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/save_photo_forward_arrow"
+        android:layout_toRightOf="@id/save_photo_back_arrow"
+        android:gravity="center|center_horizontal"
+        android:singleLine="false"
+        android:text="프레임 이름"
+        app:autoSizeTextType="uniform" />
+
+    <ImageButton
+        android:id="@+id/save_photo_forward_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/save_photo_frame_name"
+        android:layout_alignBottom="@id/save_photo_frame_name"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_toLeftOf="@id/save_photo_camera"
+        android:src="@drawable/ic_baseline_chevron_right_24" />
+
+    <ImageButton
+        android:id="@+id/save_photo_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/save_photo_frame_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_camera_alt_24" />
+
+    <ScrollView
+        android:id="@+id/save_photo_main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/save_photo_frame_name"
+        android:layout_alignParentBottom="false"
+        android:layout_marginBottom="60dp">
+
+        <RelativeLayout
+            android:id="@+id/save_photo_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save_photo_share_photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="공유하기"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/save_photo_gallery_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="갤러리 저장" />
+    </LinearLayout>
+
+</RelativeLayout>

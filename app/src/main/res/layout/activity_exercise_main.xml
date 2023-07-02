@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/exercie_main_fr_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    app:layout_constraintLeft_toRightOf="parent"
+    tools:context=".Exercise.ExerciseMainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/exercie_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Exercise.ExerciseMainActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rest_time_progress_cl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true">
+
+                    <ProgressBar
+                        android:id="@+id/rest_time_progress_bar"
+                        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                        android:layout_width="144dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/rest_time_progress_bar_inner"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/rest_time_progress_bar_outer"
+
+                        android:rotation="-90"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/rest_time_text_view"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:gravity="center"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/rest_time_progress_bar"
+                        app:layout_constraintStart_toStartOf="@+id/rest_time_progress_bar"
+                        app:layout_constraintTop_toTopOf="@+id/rest_time_progress_bar" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/rest_time_progress_cl"
+                    android:padding="5dp">
+
+                    <TableRow
+                        android:id="@+id/total_exercise_time_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:id="@+id/exercise_time_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="운동시간"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:id="@+id/total_exercise_time_frl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/left_side_line">
+
+                            <Button
+                                android:id="@+id/total_exercise_time_start_bt"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#0970e6"
+                                android:insetLeft="6dp"
+                                android:insetRight="6dp"
+                                android:text="운동 시작"
+                                android:visibility="visible" />
+
+                            <Chronometer
+                                android:id="@+id/dialog_total_exercise_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:format="%s"
+                                android:gravity="center"
+                                android:textColor="@android:color/secondary_text_light"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:id="@+id/exercise_count_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="0.5"
+                            android:gravity="center|center_vertical"
+                            android:padding="2dp"
+                            android:text="운동개수"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_exercise_count"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/left_side_line"
+                            android:gravity="center"
+                            android:text="0 종목"
+                            android:textColor="@android:color/secondary_text_light"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:id="@+id/exercise_weight_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="설정 운동량\n(kg)"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_exercise_weight"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/left_side_line"
+                            android:gravity="center"
+                            android:text="0.0 kg"
+                            android:textColor="@android:color/secondary_text_light"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </TableLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/exercise_card_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.4"
+            android:nestedScrollingEnabled="true">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add_exercise_bt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#0970e5"
+                android:text="운동 추가" />
+
+            <Button
+                android:id="@+id/add_routine_bt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#0970e5"
+                android:text="루틴 불러오기" />
+
+            <Button
+                android:id="@+id/exercise_complete_bt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:backgroundTint="#0670e6"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="운동 완료하기" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

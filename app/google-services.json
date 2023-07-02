@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "716940463293",
+    "firebase_url": "https://myexerciseapp-4e7d1-default-rtdb.firebaseio.com",
+    "project_id": "myexerciseapp-4e7d1",
+    "storage_bucket": "myexerciseapp-4e7d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716940463293:android:a7f4a1bf856396c99fbbd4",
+        "android_client_info": {
+          "package_name": "org.techtown.MyExerciseApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716940463293-sop8ilfs32kmvbtien6g8ri92auqfl2i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.techtown.MyExerciseApp",
+            "certificate_hash": "ac0a69a080efeea7ac9d43246a1657f734ef2aba"
+          }
+        },
+        {
+          "client_id": "716940463293-46ac1l1d1di5nql23v6abrmms8oa054r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMWrIxPh4TGFQ28nGLOyh3Q6shA7tb5Eg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716940463293-46ac1l1d1di5nql23v6abrmms8oa054r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

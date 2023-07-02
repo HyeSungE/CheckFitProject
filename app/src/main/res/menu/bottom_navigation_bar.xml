@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="홈"/>
+    <item
+        android:id="@+id/exerciseHome"
+        android:enabled="true"
+        android:icon="@drawable/post_like_empty"
+        android:title="운동목록"/>
+
+    <item
+        android:id="@+id/feedHome"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_dynamic_feed_24"
+        android:title="피드"/>
+
+    <item
+        android:id="@+id/group_home_tab"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_groups_24"
+        android:title="그룹"/>
+
+    <item
+        android:id="@+id/mypageHome"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_3p_24"
+        android:title="마이페이지"/>
+</menu>

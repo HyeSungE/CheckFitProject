@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    tools:context=".MyPage.MypageHomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:id="@+id/my"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/mypage_image_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <LinearLayout
+                    android:id="@+id/mypage_profile_parent_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mypage_image_profile"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/my_feed_posts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="0"
+                                android:textColor="@color/LoginColorPrimaryDark"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="운동기록" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="35dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/my_feed_followers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="0"
+                                android:textColor="@color/LoginColorPrimaryDark"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="팔로워" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="35dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/my_feed_following"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="0"
+                                android:textColor="@color/LoginColorPrimaryDark"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="팔로잉" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/my_feed_edit_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="30dp"
+                        android:background="#0970e5"
+                        android:text="프로필 편집"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mypage_exercise_priority"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@id/mypage_profile_parent_linear"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:text="부위별 운동 횟수"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <com.github.mikephil.charting.charts.RadarChart
+                                android:id="@+id/mypage_exercise_priority_radarChart"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ListView
+                                    android:id="@+id/mypage_exercise_priority_rank_recycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:nestedScrollingEnabled="true" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mypage_exercise_analytics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mypage_exercise_priority"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"></LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/mypage_exercise_analytics_exercise_name"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2"
+                                        android:autoSizeMaxTextSize="18sp"
+                                        android:autoSizeTextType="uniform"
+                                        android:gravity="center_vertical"
+                                        android:maxLines="1"
+                                        android:paddingLeft="5dp"
+                                        android:text="버튼을 눌러 운동을 선택해주세요 ☞"
+                                        android:textSize="18sp" />
+
+                                    <Button
+                                        android:id="@+id/mypage_exercise_analytics_exercise_select"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/button_radius"
+                                        android:text="운동" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/mypage_exercise_analytics_1rm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:gravity="center_vertical"
+                                    android:text="나의 예상 1RM(kg)이 궁금하다면 ?" />
+
+                                <TextView
+                                    android:id="@+id/mypage_exercise_analytics_max_weight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:gravity="center_vertical"
+                                    android:text="나의 최고 중량이 궁금하다면 ?" />
+
+                                <TextView
+                                    android:id="@+id/mypage_exercise_analytics_max_volume"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:gravity="center_vertical"
+                                    android:text="나의 최고 운동 볼륨이 궁금하다면 ?" />
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <Button
+                                android:id="@+id/mypage_line_chart_1rm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:text="1RM" />
+
+                            <Button
+                                android:id="@+id/mypage_line_chart_weight_max"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:text="중량" />
+
+                            <Button
+                                android:id="@+id/mypage_line_chart_max_vol"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="볼륨" />
+                        </LinearLayout>
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/mypage_exercise_analytics_lineChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone">
+
+                        </com.github.mikephil.charting.charts.LineChart>
+
+                        <TextView
+                            android:id="@+id/mypage_no_line_chart_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="운동을 선택해 주세요 !"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/mypage_line_chart_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="true"
+                            android:gravity="center"
+                            android:hint="차트를 클릭하여 날짜를 확인하세요 !"
+                            android:textColor="@color/LoginColorBlack"
+                            android:textSize="16sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/mypage_exercise_analytics_ranking"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/mypage_exercise_analytics_exercise_rank_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:gravity="center"
+                                        android:text="랭킹"
+                                        android:textColor="@color/LoginColorBlack"
+                                        android:textSize="16sp" />
+
+                                    <ImageView
+                                        android:id="@+id/imageView5"
+                                        android:layout_width="30dp"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="0"
+                                        android:src="@drawable/mypage_ranking_title_image" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/mypage_exercise_analytics_ranking_recycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    android:nestedScrollingEnabled="true">
+
+                                    <TextView
+                                        android:id="@+id/mypage_no_ranking_message"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="운동을 선택해주세요 !\n선택하셨다면, 아직 랭킹이 집계되지 않았습니다."
+                                        android:textSize="20sp" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/mypage_1rm_second_card"
+                                        android:layout_width="0dp"
+                                        android:layout_height="100dp"
+                                        android:layout_gravity="center|left"
+                                        android:layout_weight="1"
+                                        android:visibility="gone">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:id="@+id/mypage_rank_silver_medal"
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_toLeftOf="@id/mypage_rank_1rm_second_image"
+                                                android:src="@drawable/silver_medal" />
+
+                                            <de.hdodenhof.circleimageview.CircleImageView
+
+                                                android:id="@+id/mypage_rank_1rm_second_image"
+
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_gravity="center|top" />
+
+                                            <TextView
+                                                android:id="@+id/mypage_rank_1rm_second_nickname"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="25dp"
+                                                android:layout_below="@id/mypage_rank_1rm_second_image"
+                                                android:layout_alignParentEnd="false"
+                                                android:layout_alignParentBottom="false" />
+
+                                            <TextView
+                                                android:id="@+id/mypage_rank_1rm_second_weight"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="25dp"
+                                                android:layout_below="@id/mypage_rank_1rm_second_nickname"
+                                                android:layout_alignParentEnd="false"
+                                                android:layout_alignParentBottom="false" />
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/mypage_1rm_first_card"
+                                        android:layout_width="0dp"
+                                        android:layout_height="100dp"
+                                        android:layout_gravity="center|top"
+                                        android:layout_weight="1"
+                                        android:visibility="gone">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:id="@+id/mypage_rank_gold_medal"
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_toLeftOf="@id/mypage_rank_1rm_first_image"
+                                                android:src="@drawable/golden_medal" />
+
+                                            <de.hdodenhof.circleimageview.CircleImageView
+
+                                                android:id="@+id/mypage_rank_1rm_first_image"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_gravity="center|top" />
+
+                                            <TextView
+                                                android:id="@+id/mypage_rank_1rm_first_nickname"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="25dp"
+                                                android:layout_below="@id/mypage_rank_1rm_first_image"
+                                                android:layout_alignParentEnd="false"
+                                                android:layout_alignParentBottom="false" />
+
+                                            <TextView
+                                                android:id="@+id/mypage_rank_1rm_first_weight"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="25dp"
+                                                android:layout_below="@id/mypage_rank_1rm_first_nickname"
+                                                android:layout_alignParentEnd="false"
+                                                android:layout_alignParentBottom="false" />
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/mypage_1rm_third_card"
+                                        android:layout_width="0dp"
+                                        android:layout_height="100dp"
+                                        android:layout_gravity="bottom|right"
+                                        android:layout_weight="1"
+                                        android:visibility="gone">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:id="@+id/mypage_rank_iron_medal"
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_toLeftOf="@id/mypage_rank_1rm_third_image"
+                                                android:src="@drawable/iron_medal" />
+
+                                            <de.hdodenhof.circleimageview.CircleImageView
+
+                                                android:id="@+id/mypage_rank_1rm_third_image"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_gravity="center|top" />
+
+                                            <TextView
+                                                android:id="@+id/mypage_rank_1rm_third_nickname"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="25dp"
+                                                android:layout_below="@id/mypage_rank_1rm_third_image"
+                                                android:layout_alignParentEnd="false"
+                                                android:layout_alignParentBottom="false" />
+
+                                            <TextView
+                                                android:id="@+id/mypage_rank_1rm_third_weight"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="25dp"
+                                                android:layout_below="@id/mypage_rank_1rm_third_nickname"
+                                                android:layout_alignParentEnd="false"
+                                                android:layout_alignParentBottom="false" />
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/textView14"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginRight="15dp"
+                                        android:gravity="center"
+                                        android:text="당신의 랭킹은 " />
+
+                                    <TextView
+                                        android:id="@+id/mypage_exercise_analytics_exercise_my_rank"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_marginRight="15dp"
+                                        android:layout_toRightOf="@id/textView14"
+                                        android:gravity="center"
+                                        android:textColor="@color/LoginColorBlack"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/textView15"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_toRightOf="@id/mypage_exercise_analytics_exercise_my_rank"
+                                        android:gravity="center"
+                                        android:text="입니다." />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
+<!--<androidx.cardview.widget.CardView-->
+<!--android:id="@+id/mypage_exercise_analytics"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="200dp"-->
+<!--android:layout_below="@id/mypage_exercise_priority"-->
+<!--android:layout_marginTop="15dp" />-->

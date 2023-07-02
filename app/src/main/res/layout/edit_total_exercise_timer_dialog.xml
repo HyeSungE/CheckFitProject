@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_total_exercise_timer_rel_layout"
+    android:layout_width="270dp"
+    android:layout_height="290dp"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:background="@drawable/edit_rest_timer_border"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:id="@+id/edit_total_exercise_timer_dig_title"
+        android:layout_width="199dp"
+        android:layout_height="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:text="운동 시간 설정"
+        android:textSize="16sp" />
+
+
+    <Chronometer
+        android:id="@+id/dialog_total_exercise_time"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_total_exercise_timer_dig_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exercise_list_non_select_border"
+        android:format="%s"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="30dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/dialog_total_exercise_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/edit_total_exercise_timer_start_bt"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignTop="@id/divider3"
+        android:layout_toStartOf="@id/divider3"
+        android:background="@drawable/circle_button_background"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_baseline_pause_24" />
+
+    <ImageButton
+        android:id="@+id/edit_total_exercise_timer_reset_bt"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignTop="@id/divider3"
+        android:layout_toEndOf="@id/divider3"
+        android:background="@drawable/circle_button_background"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_baseline_replay_24" />
+
+    <EditText
+        android:id="@+id/edit_total_exercise_timer_up_down_minute"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_total_exercise_timer_start_bt"
+
+        android:layout_alignStart="@id/edit_total_exercise_timer_start_bt"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="viewEnd" />
+
+    <TextView
+        android:id="@+id/edit_total_exercise_timer_minute_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_total_exercise_timer_start_bt"
+        android:layout_alignEnd="@id/edit_total_exercise_timer_start_bt"
+        android:layout_alignBottom="@id/edit_total_exercise_timer_up_down_minute"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/edit_total_exercise_timer_up_down_minute"
+        android:gravity="left|center_vertical"
+        android:text="분"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/edit_total_exercise_timer_up_bt"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/divider3"
+        android:layout_alignStart="@id/divider3"
+        android:layout_alignBottom="@id/edit_total_exercise_timer_up_down_minute"
+        android:layout_marginTop="10dp"
+        android:text="▲"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/edit_total_exercise_timer_down_bt"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/divider3"
+        android:layout_alignEnd="@id/edit_total_exercise_timer_reset_bt"
+        android:layout_alignBottom="@id/edit_total_exercise_timer_up_down_minute"
+        android:layout_marginTop="10dp"
+        android:text="▼"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/edit_total_exercise_timer_ok_bt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#0970e5"
+        android:text="확인" />
+
+
+</RelativeLayout>
